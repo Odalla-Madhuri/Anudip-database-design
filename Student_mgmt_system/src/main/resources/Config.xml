@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+	<session-factory>
+	
+		<!-- Database connection settings -->
+		<property name = "hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name = "hibernate.connection.url">jdbc:postgresql://localhost/student_mgmt_system</property>
+		<property name = "hibernate.connection.username">postgres</property>
+		<property name = "hibernate.connection.password">MADHU</property>
+		<property name = "hibernate.current_session_context_class">thread</property>
+	
+		<!-- JDBC connection pool settings -->
+		<property name="hibernate.c3p0.min_size">5</property>
+    	<property name="hibernate.c3p0.max_size">20</property>
+    	
+    	<!-- Other Hibernate properties -->
+    	<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    	<property name="hibernate.show_sql">true</property>
+    	<property name="hibernate.hbm2ddl.auto">update</property>
+			
+		<mapping class = "com.ajp.entity.Student" />
+		<mapping class = "com.ajp.entity.Enrollment" />
+		<mapping class = "com.ajp.entity.Course" />
+		<mapping class = "com.ajp.entity.Subject" />
+		<mapping class = "com.ajp.entity.Assignment" />
+		<mapping class = "com.ajp.entity.Instructor" />
+			
+	</session-factory>
+</hibernate-configuration>
